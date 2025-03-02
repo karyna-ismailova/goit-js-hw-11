@@ -3,8 +3,10 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
+
+
 const lightbox = new SimpleLightbox('.gallery a');
-const loader = document.querySelector('.loader');
+const loadingMsg = document.querySelector('.loader');
 
 export function renderGallery(images) {
     const gallery = document.querySelector('.gallery');
@@ -31,9 +33,14 @@ export function showErrorMessage() {
 }
 
 export function showLoader() {
-    if (loader) loader.style.display = 'block';
+    if (loadingMsg) {
+        
+        loadingMsg.style.display = 'block';
+    }
 }
 
 export function hideLoader() {
-    if (loader) loader.style.display = 'none';
+    if (loadingMsg) {
+        loadingMsg.style.display = 'none';
+    }
 }

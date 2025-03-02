@@ -6,6 +6,9 @@ import { renderGallery, showErrorMessage, showLoader, hideLoader} from './js/ren
 document.querySelector('.search-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const query = event.target.elements.searchQuery.value.trim();
+
+    const gallery = document.querySelector('.gallery'); 
+    gallery.innerHTML = '';
     
     if (!query) {
         showErrorMessage();

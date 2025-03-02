@@ -9,5 +9,5 @@ import{a as c,S as u,i as f}from"./assets/vendor-D_Kruy52.js";(function(){const 
                 <li>Downloads<br>${r.downloads}</li>
             </ul>
         </a></li>
-    `).join(""),p.refresh()}function l(){f.error({title:"Error",message:"Sorry, there are no images matching your search query. Please try again!"})}function g(){i&&(i.style.display="block")}function b(){i&&(i.style.display="none")}document.querySelector(".search-form").addEventListener("submit",async s=>{s.preventDefault();const t=s.target.elements.searchQuery.value.trim();g();const r=await y(t);if(b(),r.length>0?h(r):l(),!t){l();return}});
+    `).join(""),p.refresh()}function l(){f.error({title:"Error",message:"Sorry, there are no images matching your search query. Please try again!"})}function g(){i&&(i.style.display="block")}function b(){i&&(i.style.display="none")}document.querySelector(".search-form").addEventListener("submit",async s=>{s.preventDefault();const t=s.target.elements.searchQuery.value.trim();if(!t){l();return}g();const r=await y(t);b(),r.length>0?h(r):l()});
 //# sourceMappingURL=index.js.map
